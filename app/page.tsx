@@ -2,7 +2,7 @@
 import Image from "next/image";
 import useState from "react-usestateref";
 import userPic from "../public/user.png";
-import botPic from "../public/logo.png";
+import botPic from "../public/robot.png";
 import { Josefin_Sans } from "next/font/google";
 const manrope = Josefin_Sans({ weight: "400", subsets: ["latin"] });
 
