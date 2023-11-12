@@ -3,6 +3,7 @@ import Image from "next/image";
 import useState from "react-usestateref";
 import userPic from "../public/user.png";
 import botPic from "../public/robot.png";
+import logo from "../public/logo.png"
 import { Josefin_Sans } from "next/font/google";
 const manrope = Josefin_Sans({ weight: "400", subsets: ["latin"] });
 
@@ -119,7 +120,7 @@ export default function Home() {
   return (
     <main className="bg-black min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
       <div className="w-full flex flex-col items-center justify-center">
-        <Image src={botPic} alt="logo" width={400} className="py-4"></Image>
+        <Image src={logo} alt="logo" width={400} className="py-4"></Image>
         <div className={manrope.className}>
           <div className="text-white text-xl">BETA</div>
         </div>
