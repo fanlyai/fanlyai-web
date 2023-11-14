@@ -28,7 +28,7 @@ export default async function handler(
     return new Response("Please send your prompt", { status: 400 });
   }
   const aiResult = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
+    model: "gpt-4-1106-preview",
     messages:[{ role: "user", content:`${prompt}` }] ,
     temperature: 0,
    

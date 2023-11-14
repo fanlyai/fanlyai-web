@@ -34,7 +34,7 @@ const ChatMessage = ({ text, from }: MessageProps) => {
       )}
       {from == Creator.Bot && (
         <div className="bg-[#27272B80] p-4 z-10 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
-          <Image src={botPic} alt="User" className="bg-white rounded-full" width={40} />
+          <Image src={botPic} alt="User" className="bg-black rounded-full" width={40} />
           <p className="text-white">{text}</p>
         </div>
       )}
