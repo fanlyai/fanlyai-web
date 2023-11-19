@@ -2,11 +2,12 @@
 import Image from "next/image";
 import useState from "react-usestateref";
 import userPic from "../public/user.png";
+import { Josefin_Sans, Outfit } from "next/font/google";
 import botPic from "../public/robot.png";
 import logo from "../public/logo.png"
-import { Josefin_Sans } from "next/font/google";
-const manrope = Josefin_Sans({ weight: "400", subsets: ["latin"] });
 
+const manrope = Josefin_Sans({ weight: "400", subsets: ["latin"] });
+const out = Outfit({ weight: "200", subsets: ["latin"] });
 enum Creator {
   Me = 0,
   Bot = 1,
@@ -27,15 +28,16 @@ const ChatMessage = ({ text, from }: MessageProps) => {
   return (
     <div className="z-10">
       {from == Creator.Me && (
-        <div className="bg-[#00AFF090] relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+        <div className="bg-[#e9d5e980] justify-end relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+          <p className="text-black">{text}</p>
           <Image src={userPic} alt="User" className="rounded-full" width={40} />
-          <p className="text-white">{text}</p>
+         
         </div>
       )}
       {from == Creator.Bot && (
-        <div className="bg-[#27272B80] p-4 z-10 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+        <div className="bg-[#cbcbcb40] p-4 z-10 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
           <Image src={botPic} alt="User" className="bg-black rounded-full" width={40} />
-          <p className="text-white">{text}</p>
+          <p className="text-black">{text}</p>
         </div>
       )}
     </div>
@@ -57,11 +59,11 @@ const ChatInput = ({ onSend, disabled }: InputProps) => {
   };
 
   return (
-    <div className="bg-black  p-2 rounded-lg flex justify-center">
+    <div className="bg-white  p-2 rounded-lg flex justify-center">
       <input
         value={input}
         onChange={(e: any) => setInput(e.target.value)}
-        className="w-full py-2 px-3 text-black border-4 border-[#00AFF0] bg-white rounded-lg focus:outline-none"
+        className="w-full py-2 px-3 text-black border-4 border-[#C80FB0] bg-white rounded-lg focus:outline-none"
         type="text"
         placeholder="Talk with FanlyAI!"
         disabled={disabled}
@@ -118,11 +120,15 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-black min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
+    <main className="bg-white min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
       <div className="w-full flex flex-col items-center justify-center">
-        <Image src={logo} alt="logo" width={400} className="py-4"></Image>
+      <div className={out.className}>
+        <div className={`text-5xl py-12 text-black ${out.className}`}>
+          fanly<span className="text-[#C80FB0]">AI</span>
+        </div>
+      </div>
         <div className={manrope.className}>
-          <div className="text-white text-xl">BETA</div>
+          <div className="text-[#e8b4e8] text-xl">BETA</div>
         </div>
       </div>
      
