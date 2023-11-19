@@ -59,7 +59,7 @@ const ChatInput = ({ onSend, disabled }: InputProps) => {
   };
 
   return (
-    <div className="bg-white  p-2 rounded-lg flex justify-center">
+    <div className="bg-transparent  p-2 rounded-lg flex justify-center">
       <input
         value={input}
         onChange={(e: any) => setInput(e.target.value)}
