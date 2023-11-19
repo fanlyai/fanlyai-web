@@ -144,7 +144,7 @@ export default function Home() {
           <ChatMessage key={msg.key} text={msg.text} from={msg.from} />
         ))}
         {messages.length == 0 && (
-          <div className="flex w-full justify-center items-center">
+          <div className="flex w-full space-x-2  justify-center items-center">
             <div className="bg-green-600 w-2 h-2 rounded-full pr-2"></div>
             <p className="text-center text-gray-400">Online</p>
           </div>
