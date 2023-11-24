@@ -124,7 +124,7 @@ export default function Home() {
       <div className="w-full flex flex-col items-center justify-center">
       <div className={out.className}>
         <div className={`text-5xl py-12 text-black ${out.className}`}>
-          fanly<span className="text-[#C80FB0]">AI</span>
+          Vuzz<span className="text-[#C80FB0]">AI</span>
         </div>
       </div>
         <div className={manrope.className}>
