@@ -65,7 +65,7 @@ const ChatInput = ({ onSend, disabled }: InputProps) => {
         onChange={(e: any) => setInput(e.target.value)}
         className="w-full py-2 px-3 text-black border-4 border-[#C80FB0] bg-white rounded-lg focus:outline-none"
         type="text"
-        placeholder="Talk with FanlyAI!"
+        placeholder="Talk with VuzzAI!"
         disabled={disabled}
         onKeyDown={(e) => handleKeyDown(e)}
       />
