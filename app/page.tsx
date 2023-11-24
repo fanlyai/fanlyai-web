@@ -28,7 +28,7 @@ const ChatMessage = ({ text, from }: MessageProps) => {
   return (
     <div className="z-10">
       {from == Creator.Me && (
-        <div className="bg-[#e9d5e980] justify-end relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+        <div className="bg-[#b0b0b080] justify-end relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
           <p className="text-black">{text}</p>
           <Image src={userPic} alt="User" className="rounded-full" width={40} />
          
@@ -130,7 +130,7 @@ export default function Home() {
         </div>
       </div>
      
-      <Image src="/ormblue.png" alt="orm" className="absolute opacity-50 left-[-80px] block z-0 top-20 " width={800} height={300}></Image>
+      <Image src="/ormwhite.png" alt="orm" className="absolute opacity-50 left-[-80px] block z-0 top-20 " width={800} height={300}></Image>
       <div className="sticky z-20 top-0 w-full pt-10 px-4">
         <ChatInput
           onSend={(input) => callApi(input)}
