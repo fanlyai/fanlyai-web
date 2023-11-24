@@ -63,7 +63,7 @@ const ChatInput = ({ onSend, disabled }: InputProps) => {
       <input
         value={input}
         onChange={(e: any) => setInput(e.target.value)}
-        className="w-full py-2 px-3 text-black border-4 border-[#C80FB0] bg-white rounded-lg focus:outline-none"
+        className="w-full py-2 px-3 text-black border-4 border-white bg-white rounded-lg focus:outline-none"
         type="text"
         placeholder="Talk with VuzzAI!"
         disabled={disabled}
@@ -120,15 +120,13 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-white min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
+    <main className="bg-black min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
       <div className="w-full flex flex-col items-center justify-center">
-      <div className={out.className}>
-        <div className={`text-5xl py-12 text-black ${out.className}`}>
-          Vuzz<span className="text-[#C80FB0]">AI</span>
-        </div>
-      </div>
+     
+        <Image src="/vuzzAIlogo.png" width={200} height={200}></Image>
+  
         <div className={manrope.className}>
-          <div className="text-[#e8b4e8] text-xl">BETA</div>
+          <div className="text-white text-xl">BETA</div>
         </div>
       </div>
      
