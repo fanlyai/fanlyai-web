@@ -123,7 +123,7 @@ export default function Home() {
     <main className="bg-black min-w-screen md:px-36 min-h-screen  bg-cover  mx-auto">
       <div className="w-full flex flex-col items-center justify-center">
      
-        <Image src="/vuzzAIlogo.png" width={200} height={200}></Image>
+        <Image alt="logo" src="/vuzzAIlogo.png" width={200} height={200}></Image>
   
         <div className={manrope.className}>
           <div className="text-white text-xl">BETA</div>
