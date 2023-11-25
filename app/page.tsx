@@ -29,7 +29,7 @@ const ChatMessage = ({ text, from }: MessageProps) => {
     <div className="z-10">
       {from == Creator.Me && (
         <div className="bg-[#b0b0b080] justify-end relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
-          <p className="text-black">{text}</p>
+          <p className="text-white">{text}</p>
           <Image src={userPic} alt="User" className="rounded-full" width={40} />
          
         </div>
@@ -37,7 +37,7 @@ const ChatMessage = ({ text, from }: MessageProps) => {
       {from == Creator.Bot && (
         <div className="bg-[#cbcbcb40] p-4 z-10 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
           <Image src={botPic} alt="User" className="bg-black rounded-full" width={40} />
-          <p className="text-black">{text}</p>
+          <p className="text-white">{text}</p>
         </div>
       )}
     </div>
