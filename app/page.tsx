@@ -28,9 +28,10 @@ const ChatMessage = ({ text, from }: MessageProps) => {
   return (
     <div className="z-10">
       {from == Creator.Me && (
-        <div className="bg-[#b0b0b080] justify-end relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+        <div className="bg-[#b0b0b080] justify-start relative z-10 p-4 my-4 rounded-lg flex gap-4 items-center whitespace-pre-wrap">
+                    <Image src={userPic} alt="User" className="rounded-full" width={40} />
+
           <p className="text-white">{text}</p>
-          <Image src={userPic} alt="User" className="rounded-full" width={40} />
          
         </div>
       )}
